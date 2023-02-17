@@ -1,13 +1,26 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 
-import { DashboardComponent } from '../../dashboard/dashboard.component';
-import { UserProfileComponent } from '../../user-profile/user-profile.component';
-import { TableListComponent } from '../../table-list/table-list.component';
-import { TypographyComponent } from '../../typography/typography.component';
-import { IconsComponent } from '../../icons/icons.component';
-import { MapsComponent } from '../../maps/maps.component';
-import { NotificationsComponent } from '../../notifications/notifications.component';
-import { UpgradeComponent } from '../../upgrade/upgrade.component';
+import {DashboardComponent} from '../../dashboard/dashboard.component';
+
+import {NotificationsComponent} from '../../notifications/notifications.component';
+
+import {NotfoundComponent} from "../../notfound/notfound.component";
+
+import {StudentComponent} from "../../student/student.component";
+import {ProfesseurComponent} from "../../professeur/professeur.component";
+import {NotesComponent} from "../../notes/notes.component";
+import {ProgrammesComponent} from "../../programmes/programmes.component";
+import {NouveautesComponent} from "../../nouveautes/nouveautes.component";
+import {InstancesComponent} from "../../instances/instances.component";
+import {ContactezNousComponent} from "../../contactez-nous/contactez-nous.component";
+import {AdminLayoutComponent} from "./admin-layout.component";
+import {RenseignementGeneraleComponent} from "../../student/renseignement-generale/renseignement-generale.component";
+import {RenseignementFamilialeComponent} from "../../student/renseignement-familiale/renseignement-familiale.component";
+import {RenseignementNumeriquesComponent} from "../../student/renseignement-numeriques/renseignement-numeriques.component";
+import {CartesComponent} from "../../student/cartes/cartes.component";
+import {DisciplineComponent} from "../../student/discipline/discipline.component";
+import {StagesComponent} from "../../student/stages/stages.component";
+
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -15,13 +28,17 @@ export const AdminLayoutRoutes: Routes = [
     //   children: [ {
     //     path: 'dashboard',
     //     component: DashboardComponent
-    // }]}, {
-    // path: '',
-    // children: [ {
-    //   path: 'userprofile',
-    //   component: UserProfileComponent
-    // }]
-    // }, {
+    //}]},
+    // {
+    //     path: '',
+    //     children: [
+    //         {
+    //           path: 'etudiants',
+    //           component: UserProfileComponent
+    //         },
+    //     ]
+    // },
+    //     //{
     //   path: '',
     //   children: [ {
     //     path: 'icons',
@@ -52,12 +69,20 @@ export const AdminLayoutRoutes: Routes = [
     //         component: UpgradeComponent
     //     }]
     // }
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
-    { path: 'table-list',     component: TableListComponent },
-    { path: 'typography',     component: TypographyComponent },
-    { path: 'icons',          component: IconsComponent },
-    { path: 'maps',           component: MapsComponent },
-    { path: 'notifications',  component: NotificationsComponent },
-    { path: 'upgrade',        component: UpgradeComponent },
+
+    {path: 'acceuil', component: DashboardComponent},
+    {path: 'etudiants', component: StudentComponent},
+
+    {path: 'professeurs', component: ProfesseurComponent},
+    {path: 'notes', component: NotesComponent},
+    {path: 'programmes', component: ProgrammesComponent},
+    {path: 'nouveautes', component: NouveautesComponent},
+    {path: 'notifications', component: NotificationsComponent},
+    {path: 'instances', component: InstancesComponent},
+    {path: 'contacs-us', component: ContactezNousComponent},
+    // {path: "**", component: NotfoundComponent},
+
+
+
+
 ];

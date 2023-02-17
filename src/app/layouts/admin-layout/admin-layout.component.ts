@@ -74,7 +74,7 @@ export class AdminLayoutComponent implements OnInit {
                   event.stopPropagation();
               }
               else if(window.event){
-                 window.event.cancelBubble = true;
+                 window.event.cancelBubble = false;
               }
           }
       });
