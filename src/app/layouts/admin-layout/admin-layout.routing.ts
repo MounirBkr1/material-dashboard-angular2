@@ -71,7 +71,24 @@ export const AdminLayoutRoutes: Routes = [
     // }
 
     {path: 'acceuil', component: DashboardComponent},
-    {path: 'etudiants', component: StudentComponent},
+    // {path: 'etudiants', component: StudentComponent},
+    {
+        path: 'etudiants',
+        component: StudentComponent,
+        children: [
+            {
+                path: '',
+                redirectTo: 'renseignementsGenerales',
+                pathMatch: 'full',
+            },
+            {path: 'renseignementsGenerales', component: RenseignementGeneraleComponent},
+            {path: 'renseignementsFamiliales', component: RenseignementFamilialeComponent},
+            {path: 'renseignementsNumeriques', component: RenseignementNumeriquesComponent},
+            {path: 'cartes', component: CartesComponent},
+            {path: 'descipline', component: DisciplineComponent},
+            {path: 'stages', component: StagesComponent},
+        ]
+    },
 
     {path: 'professeurs', component: ProfesseurComponent},
     {path: 'notes', component: NotesComponent},
